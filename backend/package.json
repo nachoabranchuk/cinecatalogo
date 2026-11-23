@@ -4,6 +4,9 @@
   "description": "API de peliculas: Express + TypeScript + MongoDB + Better Auth",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "build": "tsc -p tsconfig.json",
