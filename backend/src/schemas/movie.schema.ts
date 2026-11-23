@@ -35,7 +35,12 @@ export const createMovieSchema = z.object({
     .max(10, "La puntuacion maxima es 10"),
   inTheaters: z.boolean({ error: "inTheaters debe ser true o false" }).optional(),
   synopsis: z.string().trim().max(1000, "La sinopsis no puede superar los 1000 caracteres").optional(),
-  posterUrl: z.url({ error: "El poster debe ser una URL valida" }).max(500).optional(),
+  // "" = sin poster (asi se puede borrar uno ya cargado desde el formulario).
+  posterUrl: z
+    .url({ error: "El poster debe ser una URL valida" })
+    .max(500, "La URL del poster no puede superar los 500 caracteres")
+    .or(z.literal(""))
+    .optional(),
 });
 
 export const updateMovieSchema = createMovieSchema.partial();
