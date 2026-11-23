@@ -4,6 +4,7 @@ import { Layout } from "../layouts/Layout";
 import { ProtectedRoute } from "./ProtectedRoute";
 import { Home } from "../pages/Home";
 import { MovieDetail } from "../pages/MovieDetail";
+import { Privacy } from "../pages/Privacy";
 import { Login } from "../pages/Login";
 import { Register } from "../pages/Register";
 import { MyMovies } from "../pages/MyMovies";
@@ -23,6 +24,7 @@ export const router = createBrowserRouter([
       // Publicas
       { index: true, element: <Home /> },
       { path: "peliculas/:id", element: <MovieDetail /> },
+      { path: "privacidad", element: <Privacy /> },
 
       // Privadas: cualquier usuario con sesion
       {
