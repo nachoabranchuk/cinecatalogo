@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+/* Tema oscuro tipo cine: fondo casi negro, acento ambar. */
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-zinc-950);
+  color: var(--color-zinc-100);
+}
+
+/* Foco visible y consistente para teclado. */
+:where(a, button, input, select, textarea):focus-visible {
+  outline: 2px solid var(--color-amber-400);
+  outline-offset: 2px;
+}
