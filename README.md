@@ -8,8 +8,8 @@ Aplicación full stack para explorar y administrar un **catálogo de películas*
 
 | Servicio | URL |
 | --- | --- |
-| Frontend (Static Site) | `https://TU-FRONTEND.onrender.com` ← _completar_ |
-| Backend (Web Service) | `https://TU-BACKEND.onrender.com` ← _completar_ |
+| Frontend (Static Site) | `https://cinecatalogo-web.onrender.com`  |
+| Backend (Web Service) | `https://cinecatalogo-api-gt9z.onrender.com` |
 
 > El frontend no llama al backend por su URL: usa `/api` y Render lo reenvía al backend con un _rewrite_ (ver [Deploy](#-deploy-en-render)). Ojo: Render gratuito "duerme" el backend tras un rato sin uso, así que la primera request puede tardar ~50 segundos.
 
